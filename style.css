@@ -1,0 +1,222 @@
+@font-face {
+	font-family: 'AGENCYB';
+	src: url('fonts/AGENCYB.eot');
+	src: local('AGENCYB'), url('fonts/AGENCYB.woff') format('woff'), url('fonts/AGENCYB.ttf') format('truetype');
+}
+
+body {
+  background-color: #252525;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+
+a {
+	color:inherit;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'AGENCYB';
+	color: #eed9a4;
+	text-transform: uppercase;
+}
+
+h2 {
+  font-size: 50px; /* font 100px */
+}
+
+h3 {
+  font-size: 16px; /* font 36px */
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+header {
+  text-align:center;
+	display: inline-block;
+	width:100%
+}
+
+.logo {
+  width:250px;
+  margin:10px auto;
+}
+
+nav {
+  display: none;
+}
+
+#splash {
+  background-image: url('images/bg.jpg');
+  min-height:250px;
+	height:auto;
+}
+
+.splash_img {
+  display: none;
+}
+
+header h3 {
+  margin: 10px 20px;
+  color:#de2b23;
+}
+
+section {
+	margin: 20px 0;
+	text-align:center;
+}
+
+#recent_ep {
+  position: relative;
+  width:90%;
+  max-width: 750px;
+  margin:0 auto;
+  text-align: left;
+}
+
+#recent_ep img {
+  width:100%;
+  max-width: 750px;
+  margin-top: -40px;
+}
+
+/* #recent_ep .overlay {
+  width:100%;
+  z-index: 1;
+  height: 500px;
+  max-width: 750px;
+  position:absolute;
+  top:-25px;
+  background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.01) 1%,rgba(0,0,0,0.64) 99%,rgba(0,0,0,0.65) 100%);
+} */
+
+#recent_ep h2 {
+  color:#de2b23;
+  margin: -24px 0 0 10px;
+  text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+#recent_ep p {
+  margin-left:50px;
+}
+
+.headerbar {
+  margin: 0 auto;
+	width: 90%;
+	height: 10px;
+	border-bottom: 1px solid #eed9a4;
+	text-align: center;
+  margin-bottom:20px;
+}
+
+.headerbar span {
+	background-color: #252525;
+	padding: 0 10px;
+}
+
+.ep_unit {
+	position:relative;
+	display:inline-block;
+	width:50%;
+	box-sizing: border-box;
+	float:left;
+}
+
+.ep_unit img {
+  width:100%;
+}
+
+.ep_unit .overlay {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color: rgba(222,43,35, 0.5);
+	border:1px solid #eed9a4;
+	box-sizing: border-box;
+}
+
+.ep_details {
+  display: none;
+	position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+	z-index: 1;
+}
+
+/* RECENT EPISODE HOVER OVERLAY */
+
+.ep_unit:hover .ep_details {
+	display:block;
+}
+
+.ep_unit:hover .overlay {
+	background-color: rgba(0,0,0,0.9);
+}
+
+.ep_unit:hover img {
+	filter:grayscale(100%);
+}
+
+/* END RECENT EPISODE HOVER OVERLAY */
+
+#netflix_ad iframe {
+	position:relative;
+	top:0;
+	left:0;
+	margin-top:20px;
+	width:300px;
+	height:169px;
+}
+
+#netflix_ad .redstripe {
+	position:absolute;
+	z-index: -1;
+	bottom:-140px;
+	width: 100%;
+	height: 100px;
+	background-color: #de2b23;
+}
+
+#netflix_ad h3 {
+	padding:5px;
+	color: #de2b23;
+}
+
+#netflix_ad svg {
+	width: 184px;
+	height: 50px;
+	fill: #ffffff;
+}
+
+footer {
+	text-align: center;
+	background-image: url('images/bg.jpg');
+	background-size: cover;
+	border-top:1px solid black;
+	padding-bottom:10px;
+}
+
+footer div {
+	padding:10px;
+}
+
+#social li {
+	display:inline-block;
+	margin-top:5px;
+}
+
+#social i {
+	font-size:16px;
+	padding:5px;
+	color:#eed9a4;
+}
