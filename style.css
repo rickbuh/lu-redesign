@@ -4,11 +4,25 @@
 	src: local('AGENCYB'), url('fonts/AGENCYB.woff') format('woff'), url('fonts/AGENCYB.ttf') format('truetype');
 }
 
+/* create universal keyframed fame animation */
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Primary page styles
+----------------------------------- */
+
 body {
-  background-color: #252525;
-  color: #ffffff;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
+	background-color: #252525;
+	color: #ffffff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
 }
 
 a {
@@ -23,97 +37,179 @@ h1, h2, h3, h4, h5 {
 }
 
 h2 {
-  font-size: 50px; /* font 100px */
+	font-size: 50px; /* font 100px */
 }
 
 h3 {
-  font-size: 16px; /* font 36px */
+	font-size: 18px; /* font 36px */
 }
 
 h4 {
-  font-size: 24px;
+	font-size: 24px;
 }
 
 h5 {
-  font-size: 16px;
+	font-size: 16px;
 }
 
+/* ----- Header ----- */
 header {
-  text-align:center;
+	position:relative;
 	display: inline-block;
 	width:100%
 }
 
 .logo {
-  width:250px;
-  margin:10px auto;
+	margin:10px 0 0 25px;
+	width:65%;
+	max-width: 250px;
 }
 
-nav {
-  display: none;
+#open-nav {
+position:absolute;
+	right:12px;
+	top:10px;
+	right:25px;
+	cursor:pointer;
+	font-size:50px;
+	color: #eed9a4;
+	transition: 0.3s ease-in;
 }
 
-#splash {
-  background-image: url('images/bg.jpg');
-  min-height:250px;
-	height:auto;
+#navbar {
+	position:fixed;
+	display: block;
+	right:-50%; /* push navbar off screen by default on mobile */
+	top:0;
+	width:50%;
+	height:100vh;
+	background-color:rgba(0,0,0,0.9);
+	z-index:2;
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-.splash_img {
-  display: none;
+#close-nav{
+	display:block;
+	font-family: "AGENCYB";
+	text-transform: uppercase;
+	font-size:44px;
+	padding:10px 0 27px 10px;
+	text-align:left;
+	color:rgba(238,217,164,0.5);
+	cursor:pointer;
+	transition: 0.2s ease-in;
 }
 
-header h3 {
-  margin: 10px 20px;
-  color:#de2b23;
+header li {
+	display: block;
+	font-family: 'AGENCYB';
+	padding:5px 10px;
+	font-size: 18px;
+	color:rgba(238,217,164,0.5);
+	text-transform: uppercase;
+	text-align:left;
+	transition: 0.2s ease-in;
 }
+
+#open-nav:hover {
+	color: #de2b23;
+}
+
+nav li:hover, #close-nav:hover {
+	color:#eed9a4;
+}
+
+/* ----- End Header ----- */
 
 section {
 	margin: 20px 0;
 	text-align:center;
 }
 
-#recent_ep {
-  position: relative;
-  width:90%;
-  max-width: 750px;
-  margin:0 auto;
-  text-align: left;
+/* -----Footer ----- */
+footer {
+	background-image: url('images/bg.jpg');
+	background-size: cover;
+	border-top:1px solid black;
+	text-align:center;
+	padding-bottom:10px;
 }
 
-#recent_ep img {
-  width:100%;
-  max-width: 750px;
-  margin-top: -40px;
+#social, .copy {
+	display:block;
+	padding-top:10px;
 }
 
-/* #recent_ep .overlay {
-  width:100%;
-  z-index: 1;
-  height: 500px;
-  max-width: 750px;
-  position:absolute;
-  top:-25px;
-  background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.01) 1%,rgba(0,0,0,0.64) 99%,rgba(0,0,0,0.65) 100%);
-} */
-
-#recent_ep h2 {
-  color:#de2b23;
-  margin: -24px 0 0 10px;
-  text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+#social li {
+	display:inline-block;
+	padding-top:5px;
 }
 
-#recent_ep p {
-  margin-left:50px;
+#social i {
+	font-size:16px;
+	padding:5px;
+	color:#eed9a4;
+}
+/* ----- End Footer ----- */
+
+/* Index page styles
+-------------------------------------------------- */
+
+/* ----- Top Splash ----- */
+#splash {
+	background-image: url('images/bg.jpg');
+	height:270px;
 }
 
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.splash-img {
+	display: none;
+}
+
+header h3 {
+	margin: 10px auto;
+	color:#de2b23;
+	width: 250px;
+	text-align: center;
+}
+
+/* ----- Most Recent Episode ----- */
+#recent-ep {
+	position: relative;
+	max-width: 750px;
+	margin:0 auto;
+	text-align: left;
+	width:90%;
+}
+
+#recent-ep img {
+	width:100%;
+	max-width: 750px;
+	margin-top: -40px;
+}
+
+#recent-ep h2 {
+	color:#de2b23;
+	margin: -24px 0 0 10px;
+	text-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+#recent-ep p {
+	margin-left:30px;
+}
+
+/* ----- Previous Episodes ----- */
 .headerbar {
-  margin: 0 auto;
+	margin: 0 auto;
 	width: 90%;
 	height: 10px;
 	border-bottom: 1px solid #eed9a4;
 	text-align: center;
-  margin-bottom:20px;
+	margin-bottom:20px;
 }
 
 .headerbar span {
@@ -121,102 +217,221 @@ section {
 	padding: 0 10px;
 }
 
-.ep_unit {
+.ep-unit {
 	position:relative;
 	display:inline-block;
 	width:50%;
 	box-sizing: border-box;
+	border:1px solid #eed9a4;
 	float:left;
 }
 
-.ep_unit img {
-  width:100%;
+.ep-unit img {
+	width:100%;
 }
 
-.ep_unit .overlay {
+.ep-unit .overlay {
 	position:absolute;
 	top:0;
 	left:0;
 	width:100%;
 	height:100%;
+	z-index: 1;
 	background-color: rgba(222,43,35, 0.5);
-	border:1px solid #eed9a4;
 	box-sizing: border-box;
+	transition: all 3ms;
 }
 
-.ep_details {
-  display: none;
+.ep-details {
+	display: none;
 	position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
 	z-index: 1;
 }
 
-/* RECENT EPISODE HOVER OVERLAY */
-
-.ep_unit:hover .ep_details {
+/* ----- Previous Episode Hover events ----- */
+.ep-unit:hover .ep-details {
 	display:block;
+	animation: fade 1s;
 }
 
-.ep_unit:hover .overlay {
+.ep-unit:hover .overlay {
 	background-color: rgba(0,0,0,0.9);
 }
 
-.ep_unit:hover img {
+.ep-unit:hover img {
 	filter:grayscale(100%);
 }
 
-/* END RECENT EPISODE HOVER OVERLAY */
+/* ----- Netflix Advertisement ----- */
+#netflix-ad {
+	position: relative;
+}
 
-#netflix_ad iframe {
-	position:relative;
-	top:0;
-	left:0;
-	margin-top:20px;
+#netflix-ad iframe {
+	margin-top: 10px;
 	width:300px;
 	height:169px;
 }
 
-#netflix_ad .redstripe {
+#netflix-ad .redstripe {
 	position:absolute;
 	z-index: -1;
-	bottom:-140px;
+	bottom:110px;
 	width: 100%;
 	height: 100px;
 	background-color: #de2b23;
 }
 
-#netflix_ad h3 {
+#netflix-ad h3 {
 	padding:5px;
 	color: #de2b23;
 }
 
-#netflix_ad svg {
+#netflix-ad svg {
 	width: 184px;
 	height: 50px;
 	fill: #ffffff;
 }
 
-footer {
-	text-align: center;
-	background-image: url('images/bg.jpg');
-	background-size: cover;
-	border-top:1px solid black;
-	padding-bottom:10px;
-}
+/* Create media query when site is larger than 760px
+-------------------------------------------------- */
+@media (min-width: 760px) {
 
-footer div {
-	padding:10px;
-}
+	h2 {
+		font-size: 100px;
+	}
 
-#social li {
-	display:inline-block;
-	margin-top:5px;
-}
+	h3 {
+		font-size: 36px;
+	}
 
-#social i {
-	font-size:16px;
-	padding:5px;
-	color:#eed9a4;
+	header {
+		text-align: left;
+	}
+
+	.logo {
+		margin:30px 0 0 20px;
+	}
+
+	#navbar {
+		position: relative;
+		right:0px;
+		display:block;
+		float:right;
+		margin:40px 20px 0 0;
+		border: 1px solid #eed9a4;
+		text-align: center;
+		z-index: 1;
+		height:auto;
+		width:auto;
+		background: transparent;
+		padding:5px;
+	}
+
+	nav li {
+		display:inline-block;
+	}
+
+	#close-nav, #open-nav {
+		display:none;
+	}
+
+	#splash {
+		height:750px;
+		background-image: url('images/pentagon_large.png'), url('images/bg.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain, cover;
+	}
+
+	.splash-img {
+		display:block;
+		position: absolute;
+		right:0;
+		bottom:0;
+		z-index: 0;
+		height:90%;
+		opacity:0.2;
+		overflow: hidden;
+	}
+
+	header h3 {
+		position: relative;
+		z-index:1;
+		display:block;
+		text-align: left;
+		width:500px;
+		margin:100px 0 0 50px;
+	}
+
+	#recent-ep {
+		width:100%;
+	}
+
+	#recent-ep img {
+		margin-top: -75px;
+	}
+
+	#recent-ep .overlay {
+		width:100%;
+		z-index: 0;
+		height: 500px;
+		width: 750px;
+		position:absolute;
+		top:-75px;
+		background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.01) 1%,rgba(0,0,0,0.64) 99%,rgba(0,0,0,0.65) 100%);
+	}
+
+	#recent-ep h2 {
+		position:relative;
+		z-index:1;
+		margin: -52px 0 0 10px;
+
+	}
+
+	.headerbar {
+		height:18px;
+		margin-bottom:30px;
+	}
+
+	.ep-unit {
+		width: 25%;
+	}
+
+	#netflix-ad iframe {
+		width:750px;
+		height:422px;
+	}
+
+	#netflix-ad .redstripe {
+		height:300px;
+		bottom:160px;
+	}
+
+	footer {
+		height:75px;
+		padding:0;
+	}
+
+	#social, #social h5, #social ul, .copy {
+		display:inline-block;
+	}
+
+	#social {
+		float:right;
+		margin:20px 40px;
+	}
+
+	.copy {
+		float:left;
+		margin:20px 40px;
+	}
+
+	#social li {
+		padding-top:0;
+	}
+
 }
