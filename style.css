@@ -159,6 +159,7 @@ footer {
 #splash {
 	background-image: url('images/bg.jpg');
 	height:270px;
+	border-bottom: 1px solid black;
 }
 
 .container {
@@ -186,10 +187,15 @@ header h3 {
 	width:90%;
 }
 
-#recent-ep img {
+#recent-ep .container {
+	max-width: 750px;
+}
+
+#recent-img {
 	width:100%;
 	max-width: 750px;
 	margin-top: -40px;
+	filter:grayscale(1);
 }
 
 #recent-ep h2 {
@@ -369,9 +375,12 @@ header h3 {
 
 	#recent-ep {
 		width:100%;
+		background-image: url('images/bg2.jpg');
+		background-size: contain;
+		max-width: none;
 	}
 
-	#recent-ep img {
+	#recent-img {
 		margin-top: -75px;
 	}
 
