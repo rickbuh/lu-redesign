@@ -195,7 +195,8 @@ header h3 {
 	width:100%;
 	max-width: 750px;
 	margin-top: -40px;
-	filter:grayscale(1);
+	filter:grayscale(100%);
+	transition: 0.5s ease-in-out;
 }
 
 #recent-ep h2 {
@@ -211,11 +212,13 @@ header h3 {
 /* ----- Previous Episodes ----- */
 .headerbar {
 	margin: 0 auto;
-	width: 90%;
+	min-width: 213px;
+	width: 0%;
 	height: 10px;
 	border-bottom: 1px solid #eed9a4;
 	text-align: center;
 	margin-bottom:20px;
+	transition: 1s ease-in-out;
 }
 
 .headerbar span {
@@ -245,7 +248,7 @@ header h3 {
 	z-index: 1;
 	background-color: rgba(222,43,35, 0.5);
 	box-sizing: border-box;
-	transition: all 3ms;
+	transition: all 0.3s;
 }
 
 .ep-details {

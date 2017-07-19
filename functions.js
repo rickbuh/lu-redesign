@@ -13,15 +13,13 @@ function closeNav() {
 }
 
 // remove grayscale filter from recent-img when central on page
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function() {
   var vertScroll = window.pageYOffset;
-  var grayValue = 100 - (vertScroll/5);
-  console.log(grayValue);
-  if (vertScroll > 500) {
-    var grayValue = 0;
-  }
-  function imageGrayscale() {
-    recentImage.style.filter = "grayscale("+grayValue+"%)";
-  }
-
-})
+  if ( vertScroll >= '100' ) {
+    document.getElementById("recent-img").style.filter = 'grayscale(50%)';
+  } if (vertScroll >= '200') {
+    document.getElementById("recent-img").style.filter = 'grayscale(0%)';
+  } if (vertScroll >= '500') {
+    document.getElementById("hr1").style.width = '90%';
+  };
+});
