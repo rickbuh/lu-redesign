@@ -338,18 +338,21 @@ header h3 {
 }
 
 #roster .headerbar {
-	width:100%;
+	width:90%;
 }
 
 .roster-1 {
-	display:grid;
-	grid-template-columns: 25% 25% 25% 25%;
+	display:block;
+	grid-template-columns: 33.3% 33.3% 33.3%;
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
+	justify-content: center;
 	margin:10px auto;
 }
 
 .roster-unit {
+	margin:10px auto;
+	max-width: 250px;
 	position: relative;
 	overflow: hidden;
 	filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.5));
@@ -408,6 +411,7 @@ header h3 {
 	font-weight: bold;
 }
 
+/* ----- Roster Hover events ----- */
 .roster-unit:hover .roster-details {
 	display:block;
 	bottom: 0;
@@ -560,6 +564,23 @@ header h3 {
 
 	#social li {
 		padding-top:0;
+	}
+
+	.roster-1 {
+		display:grid;
+	}
+
+	.roster-unit {
+		margin:0 auto; /* removes padding from mobile version */
+	}
+
+}
+
+/* added media query to turn roster into 4 column grid at 1024px */
+@media (min-width: 1024px) {
+
+	.roster-1 {
+		grid-template-columns: 25% 25% 25% 25%;
 	}
 
 }
