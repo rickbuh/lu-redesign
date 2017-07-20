@@ -134,9 +134,6 @@ header li {
 }
 
 nav li:hover, #close-nav:hover {
-	animation-name: pulse;
-  animation-duration: 1s;
-  animation-fill-mode: both;
 	color:#eed9a4;
 }
 
