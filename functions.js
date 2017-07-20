@@ -15,11 +15,11 @@ function closeNav() {
 // remove grayscale filter from recent-img when central on page
 window.addEventListener('scroll', function() {
   var vertScroll = window.pageYOffset;
-  if ( vertScroll >= '100' ) {
+  if ( vertScroll >= '75' ) {
     document.getElementById("recent-img").style.filter = 'grayscale(50%)';
-  } if (vertScroll >= '200') {
+  } if (vertScroll >= '150') {
     document.getElementById("recent-img").style.filter = 'grayscale(0%)';
-  } if (vertScroll >= '500') {
+  } if (vertScroll >= '200') {
     document.getElementById("hr1").style.width = '90%';
   };
 });
