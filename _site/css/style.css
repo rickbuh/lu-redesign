@@ -54,6 +54,27 @@ table {
     opacity: 0; }
   100% {
     opacity: 1; } }
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0); } }
+@-moz-keyframes slide {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100%); }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0); } }
 /* Primary page styles ----------------------------------- */
 body {
   background-color: #252525;
@@ -415,10 +436,9 @@ header h3 {
     width: 90%; }
 
 #roster-1, #roster-2, #roster-3, #roster-4 {
-  display: grid;
+  display: inline-grid;
   position: relative;
   top: 0;
-  left: 0;
   grid-template-columns: 100%;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -428,8 +448,9 @@ header h3 {
 
 #roster-2, #roster-3, #roster-4 {
   display: none;
-  top: 0;
-  right: -100%; }
+  animation: slide 0.3s ease-out;
+  -webkit-animation: slide 0.3s ease-out;
+  -moz-animation: slide 0.3s ease-out; }
 
 .roster-unit {
   margin: 10px auto;
@@ -469,12 +490,12 @@ header h3 {
   font-size: 24px; }
 
 .roster-details {
-  color: #de2b23; }
+  color: #eed9a4; }
   .roster-details h4 {
-    color: #de2b23; }
+    color: #eed9a4; }
   .roster-details hr {
     border: none;
-    border-bottom: 1px solid #de2b23;
+    border-bottom: 1px solid #eed9a4;
     margin: 3px 0 5px 0; }
   .roster-details p {
     padding: 0;

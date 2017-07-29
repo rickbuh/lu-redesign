@@ -1,5 +1,7 @@
 # Created by https://www.gitignore.io/api/windows
 
+
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -20,5 +22,10 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+### Jekyll ###
+_site/
+.sass-cache/
+.jekyll-metadata
 
 # End of https://www.gitignore.io/api/windows

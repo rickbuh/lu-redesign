@@ -8,10 +8,9 @@
     width: 90%
 
 #roster-1, #roster-2, #roster-3, #roster-4
-  display: grid
+  display: inline-grid
   position: relative
   top: 0
-  left: 0
   grid-template-columns: 100%
   grid-column-gap: 20px
   grid-row-gap: 20px
@@ -21,8 +20,9 @@
 
 #roster-2, #roster-3, #roster-4
   display: none
-  top: 0
-  right: -100%
+  animation: slide .3s ease-out
+  -webkit-animation: slide .3s ease-out
+  -moz-animation: slide .3s ease-out
 
 .roster-unit
   margin: 10px auto
@@ -62,12 +62,12 @@
   font-size: 24px
 
 .roster-details
-  color: $red
+  color: $tan
   h4
-    color: $red
+    color: $tan
   hr
     border: none
-    border-bottom: 1px solid $red
+    border-bottom: 1px solid $tan
     margin: 3px 0 5px 0
   p
     padding: 0
