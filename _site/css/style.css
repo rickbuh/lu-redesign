@@ -1,0 +1,510 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: "AGENCYB";
+  src: url("/fonts/AGENCYB.eot");
+  src: local("AGENCYB"), url("/fonts/AGENCYB.woff") format("woff"), url("/fonts/AGENCYB.ttf") format("truetype"); }
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/* Primary page styles ----------------------------------- */
+body {
+  background-color: #252525;
+  background-image: url("/images/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "AGENCYB";
+  color: #eed9a4;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 50px; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 24px; }
+
+h5 {
+  font-size: 16px; }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+section {
+  margin: 20px 0;
+  text-align: center; }
+
+@media (min-width: 760px) {
+  h2 {
+    font-size: 100px; }
+
+  h3 {
+    font-size: 36px; }
+
+  header {
+    text-align: left; } }
+/* ----- Header ----- */
+header {
+  position: relative;
+  display: inline-block;
+  width: 100%; }
+  header li {
+    display: block;
+    font-family: "AGENCYB";
+    padding: 5px 10px;
+    font-size: 18px;
+    color: rgba(238, 217, 164, 0.7);
+    text-transform: uppercase;
+    text-align: left;
+    transition: 0.2s ease-in; }
+
+.logo {
+  margin: 10px 0 0 25px;
+  width: 65%;
+  max-width: 250px;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5)); }
+
+#open-nav {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+  font-size: 50px;
+  color: #eed9a4;
+  transition: 0.3s ease-in; }
+
+#navbar {
+  position: fixed;
+  display: block;
+  right: -50%;
+  /* push navbar off screen by default on mobile */
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */ }
+
+#close-nav {
+  display: block;
+  font-family: "AGENCYB";
+  text-transform: uppercase;
+  font-size: 44px;
+  padding: 10px 0 27px 10px;
+  text-align: left;
+  color: rgba(238, 217, 164, 0.5);
+  cursor: pointer;
+  transition: 0.2s ease-in; }
+
+#open-nav:hover {
+  color: rgba(238, 217, 164, 0.5); }
+
+nav li:hover, #close-nav:hover {
+  color: #eed9a4; }
+
+@media (min-width: 760px) {
+  header {
+    text-align: left; }
+
+  .logo {
+    margin: 30px 0 0 20px; }
+
+  #navbar {
+    position: relative;
+    right: 0px;
+    display: block;
+    float: right;
+    margin: 40px 20px 0 0;
+    border: 1px solid #eed9a4;
+    text-align: center;
+    z-index: 1;
+    height: auto;
+    width: auto;
+    background: transparent;
+    padding: 5px; }
+
+  nav li {
+    display: inline-block; }
+
+  #close-nav, #open-nav {
+    display: none; } }
+/* ----- End Header ----- */
+/* -----Footer ----- */
+footer {
+  background-image: url("/images/bg.jpg");
+  background-size: cover;
+  border-top: 1px solid black;
+  text-align: center;
+  padding-bottom: 10px; }
+
+#social, .copy {
+  display: block;
+  padding-top: 10px; }
+
+#social li {
+  display: inline-block;
+  padding-top: 5px; }
+#social i {
+  font-size: 16px;
+  padding: 5px;
+  color: #eed9a4; }
+
+@media (min-width: 760px) {
+  footer {
+    height: 75px;
+    padding: 0; }
+
+  #social {
+    display: inline-block;
+    float: right;
+    margin: 20px 40px; }
+    #social h5, #social ul {
+      display: inline-block; }
+    #social li {
+      padding-top: 0; }
+
+  .copy {
+    display: inline-block;
+    float: left;
+    margin: 20px 40px; } }
+/* ----- End Footer ----- */
+/* Index page styles -------------------------------------------------- */
+/* ----- Top Splash ----- */
+#splash {
+  background-image: url("/images/bg.jpg");
+  height: 270px;
+  border-bottom: 1px solid black; }
+
+.splash-img {
+  display: none; }
+
+header h3 {
+  margin: 10px auto;
+  color: #de2b23;
+  width: 250px;
+  text-align: center;
+  text-shadow: 2px 2px 10px black; }
+
+/* ----- Most Recent Episode ----- */
+#recent-ep {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: left;
+  width: 90%; }
+  #recent-ep .container {
+    max-width: 750px; }
+
+#recent-img {
+  width: 100%;
+  max-width: 750px;
+  margin-top: -40px;
+  transition: 0.5s ease-in-out; }
+
+#recent-ep h2 {
+  position: relative;
+  z-index: 1;
+  color: #de2b23;
+  margin: -24px 0 0 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
+#recent-ep p {
+  margin-left: 30px; }
+
+/* ----- Previous Episodes ----- */
+.headerbar {
+  margin: 0 auto;
+  min-width: 118px;
+  width: 90%;
+  height: 10px;
+  border-bottom: 1px solid #eed9a4;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: 1s ease-in-out; }
+  .headerbar span {
+    background-color: #252525;
+    padding: 0 10px; }
+
+.ep-unit {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  border: 1px solid #eed9a4;
+  float: left; }
+  .ep-unit img {
+    width: 100%; }
+  .ep-unit .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(222, 43, 35, 0.5);
+    box-sizing: border-box;
+    transition: all 0.3s; }
+
+.ep-details {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; }
+
+/* ----- Previous Episode Hover events ----- */
+.ep-unit:hover .ep-details {
+  display: block;
+  animation: fade 1s; }
+.ep-unit:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.9); }
+.ep-unit:hover img {
+  filter: grayscale(100%); }
+
+/* ----- Netflix Advertisement ----- */
+#netflix-ad {
+  position: relative; }
+  #netflix-ad iframe {
+    margin-top: 10px;
+    width: 300px;
+    height: 169px; }
+  #netflix-ad .redstripe {
+    position: absolute;
+    z-index: -1;
+    bottom: 110px;
+    width: 100%;
+    height: 100px;
+    background-color: #de2b23; }
+  #netflix-ad h3 {
+    padding: 5px;
+    color: #de2b23;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
+  #netflix-ad svg {
+    width: 184px;
+    height: 50px;
+    fill: #ffffff;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5)); }
+
+@media (min-width: 760px) {
+  #splash {
+    height: 750px;
+    background-image: url("/images/pentagon_large.png"), url("/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain, cover; }
+
+  .splash-img {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    height: 90%;
+    opacity: 0.2;
+    overflow: hidden; }
+
+  header h3 {
+    position: relative;
+    z-index: 1;
+    display: block;
+    text-align: left;
+    width: 500px;
+    margin: 100px 0 0 50px; }
+
+  #recent-ep {
+    width: 100%;
+    background-image: url("/images/bg2.jpg");
+    background-size: contain;
+    max-width: none; }
+
+  #recent-img {
+    margin-top: -75px; }
+
+  #recent-ep .overlay {
+    width: 100%;
+    z-index: 0;
+    height: 500px;
+    width: 750px;
+    position: absolute;
+    top: -75px;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.01) 1%, rgba(0, 0, 0, 0.64) 99%, rgba(0, 0, 0, 0.65) 100%); }
+  #recent-ep h2 {
+    margin: -52px 0 0 10px; }
+
+  .headerbar {
+    height: 18px;
+    margin-bottom: 30px; }
+
+  .ep-unit {
+    width: 25%; }
+
+  #netflix-ad iframe {
+    width: 750px;
+    height: 422px; }
+  #netflix-ad .redstripe {
+    height: 300px;
+    bottom: 160px; } }
+/* Roster Page Styles -------------------------------------------------- */
+#roster {
+  margin-top: 75px;
+  overflow: hidden;
+  transition: all 3s ease-in-out; }
+  #roster .headerbar {
+    width: 90%; }
+
+#roster-1, #roster-2, #roster-3, #roster-4 {
+  display: grid;
+  position: relative;
+  top: 0;
+  left: 0;
+  grid-template-columns: 100%;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: center;
+  margin: 10px auto;
+  transition: all 3s ease-in-out; }
+
+#roster-2, #roster-3, #roster-4 {
+  display: none;
+  top: 0;
+  right: -100%; }
+
+.roster-unit {
+  margin: 10px auto;
+  max-width: 250px;
+  position: relative;
+  overflow: hidden;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5)); }
+  .roster-unit img {
+    transition: 0.5s ease-in-out; }
+  .roster-unit .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out; }
+
+.roster-details {
+  color: black;
+  display: block;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: -50%;
+  left: 0;
+  right: 0;
+  transition: 0.5s ease-in-out; }
+  .roster-details h4 {
+    display: inline-block;
+    color: black; }
+
+.roster-unit a {
+  padding-left: 5px;
+  display: inline-block;
+  font-size: 24px; }
+
+.roster-details {
+  color: #de2b23; }
+  .roster-details h4 {
+    color: #de2b23; }
+  .roster-details hr {
+    border: none;
+    border-bottom: 1px solid #de2b23;
+    margin: 3px 0 5px 0; }
+  .roster-details p {
+    padding: 0;
+    text-transform: uppercase; }
+  .roster-details b {
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 16px; }
+
+.pageNum {
+  display: inline-block;
+  cursor: pointer; }
+
+/* ----- Roster Hover events ----- */
+.roster-unit:hover .roster-details {
+  display: block;
+  bottom: 0; }
+.roster-unit:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.9); }
+.roster-unit:hover img {
+  filter: grayscale(100%); }
+
+@media (min-width: 760px) {
+  #roster-1, #roster-2, #roster-3, #roster-4 {
+    grid-template-columns: 33.3% 33.3% 33.3%; }
+
+  .roster-unit {
+    margin: 0 auto;
+    /* removes padding from mobile version */ } }
+/* added media query to turn roster into 4 column grid at 1024px */
+@media (min-width: 1024px) {
+  #roster-1, #roster-2, #roster-3, #roster-4 {
+    grid-template-columns: 25% 25% 25% 25%; } }

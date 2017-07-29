@@ -1,0 +1,105 @@
+/* Roster Page Styles --------------------------------------------------
+
+#roster
+  margin-top: 75px
+  overflow: hidden
+  transition: all 3s ease-in-out
+  .headerbar
+    width: 90%
+
+#roster-1, #roster-2, #roster-3, #roster-4
+  display: grid
+  position: relative
+  top: 0
+  left: 0
+  grid-template-columns: 100%
+  grid-column-gap: 20px
+  grid-row-gap: 20px
+  justify-content: center
+  margin: 10px auto
+  transition: all 3s ease-in-out
+
+#roster-2, #roster-3, #roster-4
+  display: none
+  top: 0
+  right: -100%
+
+.roster-unit
+  margin: 10px auto
+  max-width: 250px
+  position: relative
+  overflow: hidden
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5))
+  img
+    transition: 0.5s ease-in-out
+  .overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+    box-sizing: border-box
+    transition: 0.5s ease-in-out
+
+.roster-details
+  color: black
+  display: block
+  padding: 5px
+  position: absolute
+  z-index: 1
+  bottom: -50%
+  left: 0
+  right: 0
+  transition: 0.5s ease-in-out
+  h4
+    display: inline-block
+    color: black
+
+.roster-unit a
+  padding-left: 5px
+  display: inline-block
+  font-size: 24px
+
+.roster-details
+  color: $red
+  h4
+    color: $red
+  hr
+    border: none
+    border-bottom: 1px solid $red
+    margin: 3px 0 5px 0
+  p
+    padding: 0
+    text-transform: uppercase
+  b
+    font-size: 11px
+    font-weight: bold
+    line-height: 16px
+
+.pageNum
+  display: inline-block
+  cursor: pointer
+
+/* ----- Roster Hover events -----
+
+.roster-unit:hover
+  .roster-details
+    display: block
+    bottom: 0
+  .overlay
+    background-color: rgba(0, 0, 0, 0.9)
+  img
+    filter: grayscale(100%)
+
+@media (min-width: $mq-tablet)
+  #roster-1, #roster-2, #roster-3, #roster-4
+    grid-template-columns: 33.3% 33.3% 33.3%
+  .roster-unit
+    margin: 0 auto
+    /* removes padding from mobile version
+
+/* added media query to turn roster into 4 column grid at 1024px
+@media (min-width: $mq-desktop)
+  #roster-1, #roster-2, #roster-3, #roster-4
+    grid-template-columns: 25% 25% 25% 25%
