@@ -5,11 +5,11 @@ var rosterPages = document.getElementsByClassName("roster-page");
 var pageNum = document.getElementsByClassName("pageNum");
 
 document.getElementById("open-nav").onclick = function() {
-  nav.style.right = '0';
+  nav.style.right = "0";
 };
 
 document.getElementById("close-nav").onclick = function() {
-  nav.style.right = '-50%';
+  nav.style.right = "-50%";
 };
 
 function roster1() {

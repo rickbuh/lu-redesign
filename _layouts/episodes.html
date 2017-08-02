@@ -1,0 +1,51 @@
+---
+title: Luchadores
+permalink: /episodes/
+---
+<!DOCTYPE html>
+<head>
+  <title>Lucha Underground | {{ page.title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel='stylesheet' type='text/css' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'> <!-- Icons linked from Ionicons.com -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'> <!-- Opens Sans referenced from Google fonts -->
+</head>
+
+<body>
+
+  <header>
+    {% include header.html %}
+  </header>
+
+  <section id='ind-episode'>
+
+    <div class='container'>
+      <div class='headerbar'>
+        <h3>
+          <span>
+            {{ page.title }}
+          </span>
+        </h3>
+      </div>
+    </div>
+
+    <div class='container'>
+      <img src="/images/episodes/{{ page.image }}">
+      <h4>{% if page.categories contains "season_3" %} Episode 3.{{ page.desc }}
+      {% else if page.categories contains "season_2" %} Episode 2.{{ page.desc }}
+      {% else if page.categories contains "season_1" %} Episode 1.{{ page.desc }}
+      {% endif %}</h4>
+      <h4>Air date: {{ page.date | date: "%B %d, %Y" }}</h4>
+      {{content}}
+  </div>
+
+
+
+
+    </section>
+
+  {% include footer.html %}
+
+</body>

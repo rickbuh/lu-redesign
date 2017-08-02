@@ -3,7 +3,7 @@
 
 <!DOCTYPE html>
 <head>
-  <title></title>
+  <title>Lucha Underground</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="/images/favicon.ico">
@@ -25,10 +25,13 @@
 
   <section id='recent-ep'>
     <div class='container'>
-      <img id='recent-img' src='/images/episodes/e324.jpg' alt='Episode 24'>
-      <div class='overlay'></div>
-      <h2>Next Episode</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in pretium nisl. Mauris mollis ultrices elit. Sed dictum est non erat cursus ornare. Sed faucibus viverra quam id tristique. Phasellus in dapibus ante, non tempor augue. Nam leo dui, congue tempus tellus a, accumsan finibus urna. Morbi finibus arcu quis dolor dapibus tincidunt. </p>
+      {% for post in site.posts limit:1 %}
+      <a href='{{ post.url }}'>
+      <img id='recent-img' src='/images/episodes/{{ post.image }}' alt='Episode {{ post.desc }}'>
+      <div class='overlay'></div></a>
+      <h2>This Week</h2>
+      <p>{{ post.excerpt }} </p>
+      {% endfor %}
     </div>
   </section>
 
@@ -43,42 +46,18 @@
         </div>
       </div>
 
-      <a href='#' class='ep-unit'>
-        <img src='/images/episodes/e323.jpg' alt='Episode 23'>
+      {% for post in site.posts offset:1 limit:4 %}
+      <a href='{{ post.url }}' class='ep-unit'>
+        <img src='/images/episodes/{{ post.image }}' alt='Episode {{ post.desc }}'>
         <div class='overlay'></div>
         <div class='ep-details'>
-          <h4>Family First</h4>
-          <h5>Episode 3.23</h5>
-
+          <h4>{{ post.title }}</h4>
+          <h5>Episode 3.{{ post.desc }}</h5>
         </div>
       </a>
+      {% endfor %}
 
-      <a href='#' class='ep-unit'>
-        <img src='/images/episodes/e322.jpg' alt='Episode 22'>
-        <div class='overlay'></div>
-        <div class='ep-details'>
-          <h4>The Cup Begins</h4>
-          <h5>Episode 3.22</h5>
-        </div>
-      </a>
 
-      <a href='#' class='ep-unit'>
-        <img src='/images/episodes/e321.jpg' alt='Episode 21'>
-        <div class='overlay'></div>
-        <div class='ep-details'>
-          <h4>Sudden Death</h4>
-          <h5>Episode 3.21</h5>
-        </div>
-      </a>
-
-      <a href='#' class='ep-unit'>
-        <img src='/images/episodes/e320.jpg' alt='Episode 20'>
-        <div class='overlay'></div>
-        <div class='ep-details'>
-          <h4>All Night Long...Again</h4>
-          <h5>Episode 3.20</h5>
-        </div>
-      </a>
 
     </section>
 
