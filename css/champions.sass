@@ -1,0 +1,97 @@
+.champ-unit
+  margin: 5px auto
+  max-width: 100%
+  height: 250px
+  position: relative
+  overflow: hidden
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5))
+  img
+    display: block
+    transition: 0.5s ease-in-out
+    margin: 0 auto
+  .overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 1
+    box-sizing: border-box
+    transition: 0.5s ease-in-out
+
+.champ-details
+  color: black
+  display: block
+  padding: 5px
+  position: absolute
+  z-index: 1
+  bottom: -50%
+  left: 0
+  right: 0
+  transition: 0.5s ease-in-out
+  h4
+    display: inline-block
+    color: black
+
+.champ-details
+  color: $tan
+  h4
+    color: $tan
+  hr
+    border: none
+    border-bottom: 1px solid $tan
+    margin: 3px 0 5px 0
+  p
+    padding: 0
+    text-transform: uppercase
+  b
+    font-size: 11px
+    font-weight: bold
+    line-height: 16px
+
+.champ-reign
+  background-color: rgba(0, 0, 0, 0.9)
+  margin: 10px auto
+  img
+    padding-top: 20px
+    max-height: 400px
+  .reign-info
+    text-align: left
+    margin: 20px
+    padding: 10px
+    h4
+      font-size: 16px
+    p
+      line-height: 18px
+
+
+/* ----- Roster Hover events -----
+
+.champ-unit:hover
+  .champ-details
+    display: block
+    bottom: 0
+  .overlay
+    background-color: rgba(0, 0, 0, 0.9)
+  img
+    filter: grayscale(100%)
+
+@media (min-width: $mq-tablet)
+  .champ-unit
+    margin: 10px auto
+    max-width: 750px
+    height: auto
+    /* removes padding from mobile version
+
+  .champ-reign
+    max-height: 250px
+    overflow: hidden
+    img
+      padding-top: 0
+      float: left
+      padding-right: 10px
+
+  .champ-reign:nth-child(even) img
+    float: right
+    padding-right: 0
+    padding-left: 10px
