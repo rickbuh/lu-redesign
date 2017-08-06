@@ -1,20 +1,20 @@
-#ind-episode
-  text-align: left
+/* ----- Mythology -----
+
+#myth
   .container
     padding: 0 10px
+  h4
+    text-align: left
+  p
+    font-size: 14px
+    line-height: 18px
+    text-align: left
+    padding-bottom: 10px
   img
     max-width: 100%
 
-  h4
-    text-transform: none
-    font-size: 24px
-
-  p
-    padding-bottom: 16px
-    line-height: 18px
-
 @media (min-width: $mq-tablet)
-  #ind-episode
+  #myth
     img
       float: left
       width: 50%
@@ -23,3 +23,5 @@
       -webkit-transform: rotate(-2deg)
       transform: rotate(-2deg)
       filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5))
+    img:nth-child(even)
+      float: right
